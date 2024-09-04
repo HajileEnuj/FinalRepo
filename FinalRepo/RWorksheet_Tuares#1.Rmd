@@ -1,0 +1,237 @@
+---
+title: "RWorksheet_Tuares#1"
+author: "Elijah June G. Tuares"
+date: "2024-09-04"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+1. Set up a vector named age, consisting of 34, 28, 22, 36, 27, 18, 52, 39, 42, 29,
+35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 42, 53, 41,
+51, 35, 24, 33, 41.
+a. How many data points?
+  there are 34 data points.
+  
+  
+b. Write the R code and its output.
+```{r}
+  age <- c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29,
+  35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 42, 53, 41,
+  51, 35, 24, 33, 41)
+length(age)
+```
+
+2. Find the reciprocal of the values for age.
+Write the R code and its output.
+```{r}
+  age <- c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29,
+  35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 42, 53, 41,
+  51, 35, 24, 33, 41)
+reciprocal_age <- 1 / age 
+reciprocal_age
+```
+
+3. Assign also new_age <- c(age, 0, age).
+
+```{r}
+  age <- c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29,
+  35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 42, 53, 41,
+  51, 35, 24, 33, 41)
+
+newage <- c(age, 0, age)
+
+print(newage)
+```
+
+What happen to the new_age?
+  
+  The c() function is utilized to concatenate the vectors, resulting in the new_age vector, which     comprises 69 elements: the initial 34 elements from the age vector, followed by a single 0,    and finally, the duplicate 34 elements from the age vector.
+  
+4. Sort the values for age.
+Write the R code and its output.
+```{r}
+sort(age)
+```
+
+5. Find the minimum and maximum value for age.
+Write the R code and its output.
+```{r}
+  min_age <- min(age)
+  max_age <- max(age)
+  print(paste("Minimum age", min_age))
+  print(paste("Maximum age", max_age))
+```
+
+6. Set up a vector named data, consisting of 2.4, 2.8, 2.1, 2.5, 2.4, 2.2, 2.5,
+2.3, 2.5, 2.3, 2.4, and 2.7.
+a. How many data points?
+
+There are 12 data points.
+
+b. Write the R code and its output.
+
+```{r}
+  data <- c(2.4, 2.8, 2.1, 2.5, 2.4, 2.2, 2.5, 2.3, 2.5, 2.3, 2.4, 2.7)
+  num_data_points <- length(data)
+  print(paste("Data points:", num_data_points))
+  print(data)
+```
+
+7. Generates a new vector for data where you double every value of the data. | What
+happen to the data?
+
+The data doubles in amount.
+
+8. Generate a sequence for the following scenario:
+
+8.1 Integers from 1 to 100.
+
+```{r}
+  seq1 <- 1:100
+  print(paste("Sequence of integers from 1 to 100:"))
+  print(seq1)
+```
+
+
+8.2 Numbers from 20 to 60
+
+```{r}
+  seq2 <- 20:60
+  print(paste("Sequence of numbers from 20 to 60:"))
+  print(seq2)
+```
+
+*8.3 Mean of numbers from 20 to 60
+
+```{r}
+  mean_seq2 <- mean(seq2)
+  print(paste("Mean of 20 to 60:", mean_seq2))
+```
+
+*8.4 Sum of numbers from 51 to 91
+
+```{r}
+  sum_seq3 <- sum(51:91)
+  print(paste("Sum of 51 to 91:", sum_seq3))
+```
+
+*8.5 Integers from 1 to 1,000
+
+```{r}
+  seq4 <- 1:1000
+  print(paste("Sequence of integers from 1 to 1,000:"))
+  print(seq4)
+```
+
+  a. How many data points from 8.1 to 8.4?_______
+  
+  There are 182 data points from 8.1 to 8.4
+  
+  b. Write the R code and its output from 8.1 to 8.4.
+  
+```{r}
+  seq1 <- 1:100
+  print(seq1)
+  seq2 <- 20:60
+  print(seq2)
+  mean_seq2 <- mean(20:60)
+  print(mean_seq2)
+  sum_seq3 <- sum(51:91)
+  print(sum_seq3)
+```
+  
+  c. For 8.5 find only maximum data points until 10.
+  
+```{r}
+  seq5 <- 1:1000
+  print(seq5[1:10])
+```
+  
+  9. *Print a vector with the integers between 1 and 100 that are not divisible by 3, 5 and
+7 using filter option.
+Filter(function(i) { all(i %% c(3,5,7) != 0) }, seq(100))
+Write the R code and its output.
+
+```{r}
+  result <- Filter(function(i) { all(i %% c(3,5,7) != 0) }, 1:100)
+
+  print(result)
+```
+
+11. List all the natural numbers below 25 that are multiples of 3 or 5.
+Find the sum of these multiples.
+
+a. How many data points from 10 to 11?
+
+ 3 + 5 + 6 + 9 + 10 + 12 + 15 + 18 + 20 + 21 + 24 = 143.
+
+b. Write the R code and its output from 10 and 11.
+
+```{r}
+multiples <- c(3, 5, 6, 9, 10, 12, 15, 18, 20, 21, 24)
+sum_multiples <- sum(multiples)
+print(paste("Sum of multiples:", sum_multiples))
+seq1 <- 10:11
+```
+
+12. Statements can be grouped together using braces ‘{’ and ‘}’. A group of statements
+is sometimes called a block. Single statements are evaluated when a new line is typed
+at the end of the syntactically complete statement. Blocks are not evaluated until a
+new line is entered after the closing brace.
+Enter this statement:
+
+x <- {0 + x + 5 + }
+
+Describe the output.
+
+13. *Set up a vector named score, consisting of 72, 86, 92, 63, 88, 89, 91, 92, 75,
+75 and 77. To access individual elements of an atomic vector, one generally uses the
+x[i] construction.
+
+```{r}
+score <- c(72, 86, 92, 63, 88, 89, 91, 92, 75, 75, 77)
+```
+
+Find x[2] and x[3]. Write the R code and its output.
+
+```{r}
+x2 <- score[2]
+x3 <- score[3]
+print(paste("x[2] =", x2))
+print(paste("x[3] =", x3))
+```
+
+14. *Create a vector a = c(1,2,NA,4,NA,6,7).
+a. Change the NA to 999 using the codes print(a,na.print="-999").
+
+```{r}
+a <- c(1, 2, NA, 4, NA, 6, 7)
+print(a)
+print(a, na.print="-999")
+```
+
+b. Write the R code and its output. Describe the output.
+
+The first line of the output displays the original vector 'a' containing 'NA' values. The second line shows the modified vector 'a', where the 'NA' values have been replaced with '-999'. The 'na.print' argument in the 'print()' function is used to define the string that will replace 'NA' values when the vector is printed.
+
+15. A special type of function calls can appear on the left hand side of the assignment
+operator as in > class(x) <- "foo".
+Follow the codes below:
+name = readline(prompt="Input your name: ")
+age = readline(prompt="Input your age: ")
+print(paste("My name is",name, "and I am",age ,"years old."))
+print(R.version.string)
+What is the output of the above code?
+
+```{r}
+name = readline(prompt="Input your name: ")
+age = readline(prompt="Input your age: ")
+print(paste("My name is",name, "and I am",age ,"years old."))
+print(R.version.string)
+```
+
+The output of the code depends on the user's provided input.
