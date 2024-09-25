@@ -204,7 +204,8 @@ c. Create an excel file from the table above and save it
 as csv file(PowerRanking). Import the csv file into
 the RStudio. What is the R script?
 ```{r}
-
+scopusData <- read.csv2("PowerRanking.csv",header = T,
+stringsAsFactors = F,sep = ",")
 ```
 
 d. Access the rows 10 to 20 and save it as Ranks.RData.
@@ -217,6 +218,25 @@ Write the R script and its output.
 9. Download the Hotels-Vienna https://tinyurl.com/Hotels-Vienna
 a. Import the excel file into your RStudio.
 What is the R script?
+```{r}
+
+```
+
+
+b. How many dimensions does the dataset have?
+What is the R script? WHat is its output?
+```{r}
+
+```
+
+
+c. Select columns country, neighbourhood,
+price, stars, accomodation_type, and
+ratings. Write the R script.
+```{r}
+
+```
+
 
 
 

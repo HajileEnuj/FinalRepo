@@ -522,13 +522,86 @@ var(rivers), sd(rivers), min(rivers), max(rivers))</li>
 </ol>
 <pre class="r"><code>data &lt;- c(
   length(rivers), sum(rivers), mean(rivers), median(rivers), var(rivers), sd(rivers), min(rivers), max(rivers)    
-)
-data</code></pre>
+)</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>What are the results? It shows the answers to each
+elements.</p></li>
+<li><p>Write the R scripts and its outputs.</p></li>
+</ol>
+<pre class="r"><code>data</code></pre>
 <pre><code>## [1]    141.0000  83357.0000    591.1844    425.0000 243908.4086    493.8708
 ## [7]    135.0000   3710.0000</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Create vectors according to the above table. Write the R scripts and
+its output.</li>
+</ol>
+<pre class="r"><code>celebrity_names &lt;- c(&quot;Tom Cruise&quot;, &quot;Rolling Stones&quot;, &quot;Oprah Winfrey&quot;, &quot;U2&quot;, &quot;Tiger Woods&quot;, &quot;Steven Spielberg&quot;, &quot;Howard Stern&quot;, &quot;50 Cent&quot;, &quot;Cast of the Sopranos&quot;, &quot;Dan Brown&quot;, &quot;Bruce Springsteen&quot;, &quot;Donald Trump&quot;, &quot;Muhammad Ali&quot;, &quot;Paul McCartney&quot;, &quot;George Lucas&quot;, &quot;Elton John&quot;, &quot;David Letterman&quot;, &quot;Phil Mickelson&quot;, &quot;J.K. Rowling&quot;, &quot;Bradd Pitt&quot;, &quot;Peter Jackson&quot;, &quot;Dr. Phil McGraw&quot;, &quot;Jay Leno&quot;, &quot;Celine Dion&quot;, &quot;Kobe Bryant&quot;)
+
+power_ranking &lt;- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25)
+pay &lt;- c(67, 90, 225, 110, 90, 332, 302, 41, 52, 88, 55, 44, 55, 40, 233, 34, 40, 47, 75, 39, 45, 32, 35, 32, 31)
+
+celebrity_names</code></pre>
+<pre><code>##  [1] &quot;Tom Cruise&quot;           &quot;Rolling Stones&quot;       &quot;Oprah Winfrey&quot;       
+##  [4] &quot;U2&quot;                   &quot;Tiger Woods&quot;          &quot;Steven Spielberg&quot;    
+##  [7] &quot;Howard Stern&quot;         &quot;50 Cent&quot;              &quot;Cast of the Sopranos&quot;
+## [10] &quot;Dan Brown&quot;            &quot;Bruce Springsteen&quot;    &quot;Donald Trump&quot;        
+## [13] &quot;Muhammad Ali&quot;         &quot;Paul McCartney&quot;       &quot;George Lucas&quot;        
+## [16] &quot;Elton John&quot;           &quot;David Letterman&quot;      &quot;Phil Mickelson&quot;      
+## [19] &quot;J.K. Rowling&quot;         &quot;Bradd Pitt&quot;           &quot;Peter Jackson&quot;       
+## [22] &quot;Dr. Phil McGraw&quot;      &quot;Jay Leno&quot;             &quot;Celine Dion&quot;         
+## [25] &quot;Kobe Bryant&quot;</code></pre>
+<pre class="r"><code>power_ranking</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25</code></pre>
+<pre class="r"><code>pay</code></pre>
+<pre><code>##  [1]  67  90 225 110  90 332 302  41  52  88  55  44  55  40 233  34  40  47  75
+## [20]  39  45  32  35  32  31</code></pre>
 <ol start="2" style="list-style-type: lower-alpha">
-<li><p>What are the results?</p></li>
-<li><p>Write the R scripts and its outputs.</p></li>
+<li>Modify the power ranking and pay of J.K. Rowling. Change power
+ranking to 15 and pay to 90. Write the R scripts and its output.</li>
+</ol>
+<pre class="r"><code>celebrity_names[which(celebrity_names == &quot;J.K. Rowling&quot;)] &lt;- &quot;J.K. Rowling&quot;
+power_ranking[which(celebrity_names == &quot;J.K. Rowling&quot;)] &lt;- 15
+pay[which(celebrity_names == &quot;J.K. Rowling&quot;)] &lt;- 90
+
+celebrity_names</code></pre>
+<pre><code>##  [1] &quot;Tom Cruise&quot;           &quot;Rolling Stones&quot;       &quot;Oprah Winfrey&quot;       
+##  [4] &quot;U2&quot;                   &quot;Tiger Woods&quot;          &quot;Steven Spielberg&quot;    
+##  [7] &quot;Howard Stern&quot;         &quot;50 Cent&quot;              &quot;Cast of the Sopranos&quot;
+## [10] &quot;Dan Brown&quot;            &quot;Bruce Springsteen&quot;    &quot;Donald Trump&quot;        
+## [13] &quot;Muhammad Ali&quot;         &quot;Paul McCartney&quot;       &quot;George Lucas&quot;        
+## [16] &quot;Elton John&quot;           &quot;David Letterman&quot;      &quot;Phil Mickelson&quot;      
+## [19] &quot;J.K. Rowling&quot;         &quot;Bradd Pitt&quot;           &quot;Peter Jackson&quot;       
+## [22] &quot;Dr. Phil McGraw&quot;      &quot;Jay Leno&quot;             &quot;Celine Dion&quot;         
+## [25] &quot;Kobe Bryant&quot;</code></pre>
+<pre class="r"><code>power_ranking</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 15 20 21 22 23 24 25</code></pre>
+<pre class="r"><code>pay</code></pre>
+<pre><code>##  [1]  67  90 225 110  90 332 302  41  52  88  55  44  55  40 233  34  40  47  90
+## [20]  39  45  32  35  32  31</code></pre>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Create an excel file from the table above and save it as csv
+file(PowerRanking). Import the csv file into the RStudio. What is the R
+script?</li>
+</ol>
+<pre class="r"><code>scopusData &lt;- read.csv2(&quot;PowerRanking.csv&quot;,header = T,
+stringsAsFactors = F,sep = &quot;,&quot;)</code></pre>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Access the rows 10 to 20 and save it as Ranks.RData. Write the R
+script and its output.</li>
+</ol>
+<ol start="9" style="list-style-type: decimal">
+<li>Download the Hotels-Vienna <a href="https://tinyurl.com/Hotels-Vienna" class="uri">https://tinyurl.com/Hotels-Vienna</a></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>Import the excel file into your RStudio. What is the R
+script?</p></li>
+<li><p>How many dimensions does the dataset have? What is the R script?
+WHat is its output?</p></li>
+<li><p>Select columns country, neighbourhood, price, stars,
+accomodation_type, and ratings. Write the R script.</p></li>
 </ol>
 
 
