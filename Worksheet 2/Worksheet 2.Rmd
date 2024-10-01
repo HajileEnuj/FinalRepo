@@ -236,9 +236,26 @@ ratings. Write the R script.
 ```{r}
 
 ```
+d. Save the data as **new.RData to your RStudio. Write the
+R script.
+
+e. Display the first six rows and last six rows of the
+new.RData. What is the R script?
 
 
+10. Create a list of ten (10) vegetables you ate during your lifetime. If none, just list down.
+a. Write the R scripts and its output.
 
+b. Add 2 additional vegetables after the last vegetables
+in the list. What is the R script and its output?
+
+c. Add 4 additional vegetables after index 5. How many
+datapoints does your vegetable list have? What is the
+R script and its output?
+
+d. Remove the vegetables in index 5, 10, and 15. How
+many vegetables were left? Write the codes and its
+output.
 
 
 
