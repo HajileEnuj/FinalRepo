@@ -79,7 +79,7 @@ factor_direction <- factor(direction, levels = c("East", "West", "North"))
 print(factor_direction)
 ```
 
-4
+4. Create a vector and factor for the table below.
 ```{r}
 factor_data <- c("East", "West", "North")
 frequency_vector <- c(1, 4, 3)
@@ -87,7 +87,7 @@ new_order_data <- factor(factor_data,levels = c("East","West","North"))
 print(new_order_data)
 ```
 
-5
+5. Enter the data below in Excel with file name = import_march.csv
 ```{r}
 #a
 data <- read.table("import_march.csv", header = TRUE, sep = ",")
@@ -97,7 +97,7 @@ data <- read.table("import_march.csv", header = TRUE, sep = ",")
 data
 ```
 
-6
+6. Full Search
 ```{r}
 exhaustive_search <- function() {
   # Get input from the user and check if it's a valid number
@@ -115,7 +115,7 @@ exhaustive_search <- function() {
 exhaustive_search()
 ```
 
-7
+7. Change
 ```{r}
 min_bills <- function(price) {
   bills <- c(1000, 500, 200, 100, 50)
@@ -132,7 +132,9 @@ min_bills <- function(price) {
 snack_price <- 2700
 cat("Minimum number of bills needed:", min_bills(snack_price), "\n")
 ```
-8
+
+8. The following is each student’s math score for one semester. Based on this, answer the
+following questions.
 ```{r}
 # a
 grades <- data.frame(
