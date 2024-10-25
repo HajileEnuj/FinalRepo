@@ -71,6 +71,7 @@ print(factor_months_vector)
 levels(factor_months_vector)
 ```
 
+
 3. Then check the summary() of the months_vector and factor_months_vector. | Interpret the results of both vectors. Are they both equally useful in this case?
 ```{r}
 direction <- c("East", "West", "North", "West", "North")
@@ -78,6 +79,7 @@ frequency <- c(1, 4, 3, 2, 1)
 factor_direction <- factor(direction, levels = c("East", "West", "North"))
 print(factor_direction)
 ```
+
 
 4. Create a vector and factor for the table below.
 ```{r}
@@ -87,15 +89,19 @@ new_order_data <- factor(factor_data,levels = c("East","West","North"))
 print(new_order_data)
 ```
 
+
 5. Enter the data below in Excel with file name = import_march.csv
+a. Import the excel file into the Environment Pane using read.table() function.
+Write the code.
 ```{r}
-#a
 data <- read.table("import_march.csv", header = TRUE, sep = ",")
 ```
+b. View the dataset. Write the R scripts and its result.
 ```{r}
 #b
 data
 ```
+
 
 6. Full Search
 ```{r}
@@ -115,6 +121,7 @@ exhaustive_search <- function() {
 exhaustive_search()
 ```
 
+
 7. Change
 ```{r}
 min_bills <- function(price) {
@@ -133,10 +140,11 @@ snack_price <- 2700
 cat("Minimum number of bills needed:", min_bills(snack_price), "\n")
 ```
 
+
 8. The following is each student’s math score for one semester. Based on this, answer the
 following questions.
+a. Create a dataframe from the above table. Write the R codes and its output.
 ```{r}
-# a
 grades <- data.frame(
   Name = c("Annie", "Thea", "Steve", "Hanna"),
   Grade1 = c(85, 65, 75, 95),
@@ -146,15 +154,19 @@ grades <- data.frame(
 )
 print(grades)
 ```
+
+b. Without using the rowMean function, output the average score of students whose average
+math score over 90 points during the semester. write R code and its output.
 ```{r}
-# b
 for (i in 1:nrow(grades)) {
   avg <- sum(grades[i, 2:5]) / 4
   print(paste(grades$Name[i], "'s average grade this semester is", avg))
 }
 ```
+
+c. Without using the mean function, output as follows for the tests in which the average
+score was less than 80 out of 4 tests.
 ```{r}
-# c
 for (j in 2:5) {
   avg_test <- mean(grades[,j])
   if (avg_test < 80) {
@@ -162,8 +174,10 @@ for (j in 2:5) {
   }
 }
 ```
+
+d. Without using the max function, output as follows for students whose highest score for
+a semester exceeds 90 points.
 ```{r}
-# d
 for (i in 1:nrow(grades)) {
   highest_score <- grades[i, 2]  
   for (j in 3:5) {  
