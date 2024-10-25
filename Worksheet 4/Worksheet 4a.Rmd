@@ -98,7 +98,6 @@ data <- read.table("import_march.csv", header = TRUE, sep = ",")
 ```
 b. View the dataset. Write the R scripts and its result.
 ```{r}
-#b
 data
 ```
 
